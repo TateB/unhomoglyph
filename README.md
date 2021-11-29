@@ -6,7 +6,8 @@
 > Replace all homoglyphs with base characters. Useful to detect similar strings.
 For example, to prohibit register similar looking nicknames at websites.
 
-Data source - [Recommended confusable mapping for IDN](http://www.unicode.org/Public/security/latest/confusables.txt), v13.0.0.
+Data source - [Recommended confusable mapping for IDN](http://www.unicode.org/Public/security/latest/confusables.txt), v13.0.0.  
+Similar letters array in addOther.js provided by [litruv](https://github.com/litruv) and [KillAllTheHippies](https://github.com/killallthehippies).
 
 __Note!__ Text after transform is NOT intended be read by humans. For example,
 `m` will be transformed to `r` + `n`. Goal is to compare 2 strings after
@@ -17,7 +18,7 @@ then transformed strings are equal.
 ## Install
 
 ```bash
-npm install unhomoglyph --save
+npm i git+https://github.com/TateB/unhomoglyph.git
 ```
 
 
