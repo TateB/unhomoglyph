@@ -14,7 +14,7 @@ function replace_fn(match) {
 }
 
 function unhomoglyph(str) {
-  return str.replace(REPLACE_RE, replace_fn);
+  return str.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").replace(/[\u200B-\u200D\uFEFF\u034F]/g, '').replace(REPLACE_RE, replace_fn).toLowerCase();
 }
 
 module.exports = unhomoglyph;
